@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "An Duong <an.duongx@gmail.com> ()",
-  "homepage": "https://github.com/anduong96/try-nice",
+  "homepage": "https://github.com/anduong96/miatch",
   "engineStrict": true,
   "keywords": [
     "typescript",
@@ -13,7 +13,7 @@
     "enum"
   ],
   "bugs": {
-    "url": "https://github.com/anduong96/miatcch/issues",
+    "url": "https://github.com/anduong96/miatch/issues",
     "email": "an.duongx@gmail.com"
   },
   "contributors": [

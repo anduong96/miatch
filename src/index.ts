@@ -1,9 +1,8 @@
-
 interface MiatchOptions {
-  format?: (value: string|number|symbol) => any,
+  format?: (value: string | number | symbol) => any
 }
 
-function __defaultFormatter(value: string|number|symbol): any {
+function __defaultFormatter(value: string | number | symbol): any {
   return value
 }
 
@@ -14,13 +13,15 @@ function __defaultFormatter(value: string|number|symbol): any {
  * @param {MiatchOptions} [options]
  * @returns {Object}
  */
-export function miatch(options?: MiatchOptions): Object {
+export function miatch(options?: MiatchOptions): Record<string, any> {
+  // eslint-disable-next-line prettier/prettier
   return new Proxy({}, {
-    get(target, key): any {
-      const formatter = options?.format || __defaultFormatter
-      return formatter(key)
+      get(target, key): any {
+        const formatter = options?.format || __defaultFormatter
+        return formatter(key)
+      }
     }
-  })
+  )
 }
 
 export default miatch
